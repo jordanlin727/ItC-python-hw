@@ -9,7 +9,7 @@ if __name__ == '__main__':
     crawler = Crawler()
     content = crawler.crawl(args.start_date, args.end_date)
     # TODO: write content to file according to spec
-    with open(args.output,'w',newline='') as f:
+    with open(args.output,'w',newline='',encoding="UTF-8") as f:
         fieldnames = ['Post date','Title','Content']
         thewriter = csv.DictWriter(f, fieldnames = fieldnames)
         thewriter.writeheader()
