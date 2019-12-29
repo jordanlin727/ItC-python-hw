@@ -12,5 +12,4 @@ def get_args():
     args = parser.parse_args()
     args.start_date = datetime.strptime(args.start_date, "%Y-%m-%d")
     args.end_date = datetime.strptime(args.end_date, "%Y-%m-%d")
-    args.output = args.output + '.csv'
     return args
